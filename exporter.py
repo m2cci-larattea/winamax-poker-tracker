@@ -968,7 +968,7 @@ def _sheet_sorties(wb: Workbook, data: dict) -> None:
 
 _TOURNAMENT_COLUMNS = [
     ("Tournoi", 34, None),
-    ("ID", None)
+    ("ID", 14, None)
     ("Format", 11, None),
     ("Vitesse", 11, None),
     ("Début", 16, TIME),
