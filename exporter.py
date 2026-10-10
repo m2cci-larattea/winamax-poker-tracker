@@ -968,6 +968,7 @@ def _sheet_sorties(wb: Workbook, data: dict) -> None:
 
 _TOURNAMENT_COLUMNS = [
     ("Tournoi", 34, None),
+    ("ID", None)
     ("Format", 11, None),
     ("Vitesse", 11, None),
     ("Début", 16, TIME),
@@ -1010,7 +1011,8 @@ def _sheet_tournois(wb: Workbook, data: dict) -> int:
         profit = won - buyin
         cumulative += profit
         _data_row(ws, row, [
-            t["name"] or t["tournament_id"],
+            t["name"],
+            t["tournament_id"],
             FORMAT_LABELS.get(t["family"], t["family"]),
             t["speed"],
             _local(t["started_at"]),
